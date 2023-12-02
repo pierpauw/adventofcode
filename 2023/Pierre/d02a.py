@@ -1,0 +1,37 @@
+import re
+
+PATH = "C:\\Users\\pierp\\Documents\\Code\\adventofcode\\2023\\Pierre\\"
+input = open(PATH+"d02a_input.txt", "r")
+
+RED, GREEN, BLUE = 12, 13, 14
+
+sum = 0
+
+def parseNumber(regex, string):
+    res = re.search(regex, string)
+    if res:
+        # print(int(res.group("number")))
+        return int(res.group("number"))
+    else:
+        return 0
+
+for line in input.readlines():
+    game = int(re.search(r"Game (\d*):", line).group()[5:-1])
+    hands = re.findall(r"[\w|\s|,]*[;|red$|green$|blue$]", line)
+
+    validGame = True
+    for hand in hands:
+        r = parseNumber(r"(?P<number>\d*) red", hand)
+        g = parseNumber(r"(?P<number>\d*) green", hand)
+        b = parseNumber(r"(?P<number>\d*) blue", hand)
+        if (r>RED) or (g>GREEN) or (b>BLUE):
+            validGame = False
+            break
+    
+    if validGame:
+        print(game, "valid")
+        sum += game
+    else:
+        print(game, "not valid")
+
+print(sum)
