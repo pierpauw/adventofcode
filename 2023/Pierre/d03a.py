@@ -1,7 +1,7 @@
 import re
 
 PATH = "C:\\Users\\pierp\\Documents\\Code\\adventofcode\\2023\\Pierre\\"
-input = open(PATH+"d03a_input.txt", "r")
+input = open(PATH+"d03input.txt", "r")
 
 PAD = '.'
 # parts = []

@@ -1,7 +1,7 @@
 import re
 
 PATH = "C:\\Users\\pierp\\Documents\\Code\\adventofcode\\2023\\Pierre\\"
-input = open(PATH+"d04a_input.txt", "r")
+input = open(PATH+"d04input.txt", "r")
 
 sum = 0
 

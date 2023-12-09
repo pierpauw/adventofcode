@@ -1,7 +1,7 @@
 import re
 
 PATH = "C:\\Users\\pierp\\Documents\\Code\\adventofcode\\2023\\Pierre\\"
-input = open(PATH+"d02a_input.txt", "r")
+input = open(PATH+"d02input.txt", "r")
 
 RED, GREEN, BLUE = 12, 13, 14
 
